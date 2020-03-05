@@ -1,0 +1,70 @@
+@import '../variables.sass'
+
+$menu-item-size: 6
+
+@mixin level-menu($cnt : 1)
+	& > div
+		position: relative
+		@include responsive(top , $menu-item-size * 1em + 2em, initial  )
+		@include responsive(left, -$menu-item-size*2 * 1em   , $menu-item-size / 1.4 * 1em)
+		width: 0
+
+		& > div
+			width: fit-content
+			display: flex
+
+			@if ($cnt<3)
+				@include level-menu($cnt+1)
+
+
+a
+	text-decoration: none
+
+.banner
+	background-color: $main-color
+	font-family: $title-font
+
+	width: 100%
+	display: flex
+
+	letter-spacing: 0.2em
+	font-size: larger
+
+	a
+		@include responsive(margin, 0.5rem 1rem 0.5rem 6rem, 0.5rem 1rem)
+		padding: 0.5em
+		width: fit-content
+
+.navbar
+	text-transform: uppercase
+	font-family: $heading-font
+	font-weight: bold
+	user-select: none
+
+	display: flex
+	flex-wrap: wrap
+	@include responsive(margin-left, 3rem, 0rem)
+	@include responsive(flex-direction, row, column)
+	div
+		@include responsive(flex-direction, row, column)
+
+	@include level-menu()
+
+	.menu-item
+		display: flex
+		height: $menu-item-size * 1rem
+		width: $menu-item-size * 1rem
+
+		align-items: center
+		align-content: center
+		text-align: initial
+		font-size : large
+
+		margin : 2rem 0 0 2rem
+
+		background-color: $main-color
+		cursor: pointer
+
+		p
+			margin-left: 1rem
+

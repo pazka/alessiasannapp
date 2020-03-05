@@ -1,2 +1,21 @@
-<div class="headers"></div>
+<div class="banner"><a href='/'>[ALESSIA_SANNA // <span>SCREEN CITY]</span></a></div>
+<nav class="navbar">
+    <a class="menu-item" href="#/whatis"><p i18n>Qu'est-ce que Screen City ?</p></a>
+    <a class="menu-item" (click)="displayScs(0)"><p i18n>Projet (ctions°)</p></a>
+    <div class="pojections-links " [hidden]="!opens[0]">
+        <div>
+            <a class="menu-item" href="#/sc_paris"><p i18n>S.C Paris</p></a>
+            <a class="menu-item" (click)="displayScs(1)"><p i18n>S.C Strasbourg</p></a>
+            <div class="pojections-links " [hidden]="!opens[1]">
+                <div>
+                    <a class="menu-item" href="#/sc_paris"><p i18n>S.C Paris</p></a>
+                    <a class="menu-item" href="#/sc_strasbourg"><p i18n>S.C Strasbourg</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="menu-item" href="#/research"><p i18n>Recherches</p></a>
+    <a class="menu-item" href="#/bio"><p i18n>Bio / Contact</p></a>
+</nav>
+
 <router-outlet></router-outlet>

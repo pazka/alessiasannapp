@@ -1,0 +1,26 @@
+$main-color: rgba(0, 24, 240, 1)
+$background-color: black
+$text-color: white
+$title-font: conduitit
+$heading-font: lulo
+$normal-font: arial
+$debug: false
+
+@font-face
+	font-family: "lulo"
+	src: url("/assets/fonts/lulo.ttf") format("truetype")
+
+@font-face
+	font-family: "conduitit"
+	src: url("/assets/fonts/conduititcstd.otf") format("opentype")
+
+// Responsiveness
+
+
+@mixin responsive($prop,$n,$p : $n,$t : $n)
+	#{$prop} : $n
+	@media only screen and (max-width: 600px)
+		#{$prop} : $p
+	@media only screen and (min-width: 600px) and (max-width: 800px)
+		#{$prop} : $t
+

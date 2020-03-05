@@ -1,0 +1,1 @@
+ng xi18n --format=xmb --output-path src/locale

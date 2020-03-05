@@ -25,10 +25,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/**/*"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "src/variables.sass"
             ],
             "scripts": []
           },
@@ -42,8 +44,8 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
+              "sourceMap": true,
+              "extractCss": false,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
