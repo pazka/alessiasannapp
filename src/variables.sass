@@ -1,26 +1,41 @@
 $main-color: rgba(0, 24, 240, 1)
-$background-color: black
-$text-color: white
-$title-font: conduitit
-$heading-font: lulo
-$normal-font: arial
+$background-color: white
+$background-color-alt: black
+$text-color: black
+$text-color-alt: white
+$text-color-accent: #155DE9
+$title-font: Conduitit
+$heading-font: Agency
+$normal-font: SourceSans
 $debug: false
 
 @font-face
-	font-family: "lulo"
-	src: url("/assets/fonts/lulo.ttf") format("truetype")
+	font-family: "Agency"
+	src: url("/assets/fonts/Agency.ttf") format("truetype")
 
 @font-face
-	font-family: "conduitit"
-	src: url("/assets/fonts/conduititcstd.otf") format("opentype")
+	font-family: "AgencyFB"
+	src: url("/assets/fonts/AgencyFB.ttf") format("truetype")
+
+@font-face
+	font-family: "Conduitit"
+	src: url("/assets/fonts/ContuitITC.ttf") format("truetype")
+
+@font-face
+	font-family: "SourceSans"
+	src: url("/assets/fonts/SourceSansPro-Regular.ttf") format("truetype")
+
+@font-face
+	font-family: "SourceSansSB"
+	src: url("/assets/fonts/SourceSansPro-SemiBold.ttf") format("truetype")
+
 
 // Responsiveness
 
+@mixin responsive-phone()
+	@media screen and (max-width: 600px)
+		@content
 
-@mixin responsive($prop,$n,$p : $n,$t : $n)
-	#{$prop} : $n
-	@media only screen and (max-width: 600px)
-		#{$prop} : $p
-	@media only screen and (min-width: 600px) and (max-width: 800px)
-		#{$prop} : $t
-
+@mixin responsive-tablet()
+	@media (min-width: 600px) and (max-width: 1280px)
+		@content

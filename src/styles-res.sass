@@ -1,0 +1,12 @@
+@import 'variables.sass'
+@import 'styles.sass'
+
+@include responsive-phone()
+	.fragment
+		padding-top: 2rem
+
+	.hide-mobile
+		display: none !important
+	.show-mobile
+		display: inherit !important
+

@@ -1,0 +1,75 @@
+@import '../../variables.sass'
+
+@include responsive-phone()
+	.content
+		flex-direction: column
+		width : 100%
+
+		.description
+			width : 90%
+			display: flex
+			flex-flow: column
+			font-size: 1em
+			padding : 2rem 5% 0 5%
+
+			>div:first-child
+				display: block
+				width : 100%
+				padding : 0
+				>*
+					margin-bottom: 1rem
+
+	.video-container
+		flex : 1
+		display: flex
+
+		video,mat-video,img
+			flex: 1
+
+@include responsive-tablet()
+	.content
+		flex : 1
+		display: flex
+		flex-direction: column
+		overflow-y: hidden
+
+		h1
+			margin-bottom: 2rem
+
+
+		.description
+			display: flex
+			width : 100%
+			padding: 0
+
+			>div
+				display: flex
+				flex-direction: row
+				align-items: center
+				width: auto
+				margin: 2rem
+
+				img
+					width : auto
+					height : 10rem
+					margin-bottom : 2rem
+
+				>div
+					margin-left: 2rem
+
+					>p
+						font-size: 0.9em
+
+				address
+					display: flex
+					flex-grow: 1
+					flex-direction: column
+					font-size: 1rem
+
+		.video-container
+			background-color: $background-color-alt
+			flex : 1
+			display: flex
+
+			video,mat-video,img
+				flex: 1

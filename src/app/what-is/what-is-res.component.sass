@@ -1,0 +1,39 @@
+@import '../../variables.sass'
+
+@include responsive-phone()
+	.content
+		padding : 2rem
+		width : auto
+
+		h1
+			font-size: 1.5em
+
+		.description
+			width : 100%
+			display: flex
+			flex-flow: column
+			font-size: 1em
+
+			>div
+				display: block
+				width : 100%
+				padding : 0
+				>*
+					margin-bottom: 1rem
+
+			video,mat-video,img
+				width : 100%
+
+@include responsive-tablet()
+	.content
+		.description
+			display: flex
+			flex-direction: column
+
+			>div
+				display: block
+				width: 100%
+				padding : 0
+
+			video,mat-video,img
+				width : 100%

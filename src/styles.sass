@@ -1,48 +1,83 @@
+@import 'reseter.sass'
 @import 'variables.sass'
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'
+
 
 //custom
-body
-	background-color: $background-color
-	color: $text-color
+
+
+html
+	scroll-behavior: smooth
+
+body::-webkit-scrollbar-track
+	background-color: rgba(0,0,0,0)
+
+.hide-mobile
+	display: inherit !important
+.show-mobile
+	display: none !important
 
 [hidden]
 	display: none !important
 
+.fragment
+	min-height: 100vh
+	overflow : hidden
+	padding-top: 6rem
+	margin-bottom: -0.30rem
+
+.fragment.no-padding
+	padding-top: 0
+
 *
-	color: $text-color
+	visibility: visible
+	opacity: 1
 	@if $debug
 		border: 1px solid red !important
 
-/* http://meyerweb.com/eric/tools/css/reset/ 	 v2.0 | 20110126	 License: none (public domain)	 Changed from CSS to SASS*/
+h1,h2,h3,h4
+	font-family: $title-font
+	text-transform: uppercase
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-	margin: 0
-	padding: 0
-	border: 0
+p,a,address
+	font-family: $normal-font
+	font-style: normal
+	text-decoration: none
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
-	display: block
+address
+	font-weight: bold
+	a,p
+		color : $main-color
+
+.blue-text
+	color : $text-color-accent
+
+.blue-text-hard
+	color : $main-color
+
+.align-right
+	text-align: end
+
+.large
+	font-size: 1.2em
+
+.row
+	display: flex
+	flex-direction: row
+.grow-1
+	flex-grow: 1
+.grow-2
+	flex-grow: 2
+.grow-3
+	flex-grow: 3
+.grow-4
+	flex-grow: 4
+
+video
+	width: 100%
 
 
-ol, ul
-	list-style: none
 
-blockquote, q
-	quotes: none
 
-blockquote:before, blockquote:after, q:before, q:after
-	content: ''
-	content: none
 
-table
-	border-collapse: collapse
-	border-spacing: 0
 
-app-root
-	display: inherit
-	width: inherit
-	box-sizing: border-box
-	height: inherit
-	margin: inherit
-	padding: inherit

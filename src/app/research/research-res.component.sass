@@ -1,0 +1,89 @@
+@import '../../variables.sass'
+
+@include responsive-phone()
+	.fragment
+		height: max-content
+		padding-bottom: 5rem
+
+	.content
+		display: flex
+		flex-wrap: wrap
+		width: auto
+		padding: 1rem
+		margin-left: 0
+		margin-top: 0
+
+		.desc
+			width: 100%
+		.pres
+			width: 100%
+
+			.col,.col-large
+				display: flex
+				flex-wrap: wrap
+				flex-direction: row
+				img
+					width: 100%
+					max-width: 10rem
+					height: auto
+					max-height: 10rem
+				img.inverted
+					width: 100%
+					max-width: 10rem
+					height: auto
+					max-height: 10rem
+
+			.row
+				display: flex
+				flex-wrap: wrap
+			.lig
+				width : 100%
+				display: flex
+				flex-wrap: wrap
+				flex-direction: row
+				img
+					width: auto
+					max-height: 5rem
+
+		.data-img
+			.img-name-container
+				width: 0
+				height: 0
+				position: relative
+				top : -5rem
+
+				.img-name
+					font-size: small
+					display: none
+	.p5Canvas
+		position: relative
+		display: block !important
+		left: 0
+		margin-top: 6rem
+		margin-bottom: -23rem
+		height: 16rem
+		width: 100%
+
+		canvas
+			height: 20rem
+
+
+@include responsive-tablet()
+	.content
+		display: flex
+		flex-direction: column
+		width : auto
+		padding: 1rem
+		margin-left: 0
+		margin-top: 0
+		.desc
+			padding: 1rem 0 1rem 1rem
+			width: 100%
+
+		.pres
+			flex-flow: revert
+			flex-wrap: wrap
+			width : 100%
+
+			.lig
+				flex-wrap: wrap

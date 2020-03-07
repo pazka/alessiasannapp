@@ -2,69 +2,158 @@
 
 $menu-item-size: 6
 
-@mixin level-menu($cnt : 1)
-	& > div
-		position: relative
-		@include responsive(top , $menu-item-size * 1em + 2em, initial  )
-		@include responsive(left, -$menu-item-size*2 * 1em   , $menu-item-size / 1.4 * 1em)
-		width: 0
 
-		& > div
-			width: fit-content
-			display: flex
+@mixin delay-enter($cnt : 1)
+	@for $i from 1 through 8
+		&>.menu-item:nth-child(#{$i}).enter
+			animation: enter
+			animation-duration : .8s
+			animation-delay : $i * .1s
+			animation-fill-mode: backwards
+	& > *
+		@if ($cnt<5)
+			@include delay-enter($cnt+1)
 
-			@if ($cnt<3)
-				@include level-menu($cnt+1)
+@mixin delay-leave($cnt : 1)
+	@for $i from 1 through 8
+		&>.menu-item:nth-child(#{$i}).leave
+			animation: enter
+			animation-duration : .8s
+			animation-delay : $i * .1s
+			animation-fill-mode: backwards
+	& > *
+		@if ($cnt<5)
+			@include delay-leave($cnt+1)
 
+
+.new-level > div
+	position: relative
+	top : $menu-item-size * 1em + 2em
+	left : -$menu-item-size*2 * 1em
+	width: 0
+
+	.new-level > div
+		width: fit-content
+		display: flex
+		top : $menu-item-size * 1em + 2em
+		left : -$menu-item-size*2 * 1em
+
+body
+	background-color: $background-color
+	color: $text-color
+
+header
+	position: fixed
+	top: 0
+	z-index: 100
+	width: 100%
 
 a
 	text-decoration: none
+	color: white
+
+.content
+	margin-top : 4rem
 
 .banner
 	background-color: $main-color
 	font-family: $title-font
+	z-index: 150
 
 	width: 100%
 	display: flex
 
 	letter-spacing: 0.2em
-	font-size: larger
+	font-size: 1.2rem
+	font-weight: bolder
+
+	color : white
 
 	a
-		@include responsive(margin, 0.5rem 1rem 0.5rem 6rem, 0.5rem 1rem)
+		margin : 0.5rem 1rem 0.5rem 6rem
 		padding: 0.5em
 		width: fit-content
+
+
+.menu
+	display: initial
+	position: fixed
+	top : 0
+	z-index: 101
+
+	width: 0
+	height: 0
+	border-top : $menu-item-size*0.5rem solid transparent
+	border-bottom : $menu-item-size*0.5rem solid transparent
+	border-left : $menu-item-size*0.5rem solid $main-color
+	border-right : 0
+
+	left : 0
+	cursor : pointer
+	transition: all 0.2s ease-in-out
+
+	&:hover
+		top : $menu-item-size*0.4rem
+		left : 0
+
+		transition: all 0.2s ease-in-out
+		border-top : $menu-item-size*0.8rem solid transparent
+		border-bottom : $menu-item-size*0.8rem solid transparent
+		border-left : $menu-item-size*0.8rem solid rgba(0,0,255,0.2)
+		border-right : 0
+
 
 .navbar
 	text-transform: uppercase
 	font-family: $heading-font
 	font-weight: bold
 	user-select: none
+	z-index: 101
 
+	position: fixed
 	display: flex
 	flex-wrap: wrap
-	@include responsive(margin-left, 3rem, 0rem)
-	@include responsive(flex-direction, row, column)
+	color : white
+	margin-left : 3rem
+	margin-top: 2rem
+	flex-direction :  row
+
 	div
-		@include responsive(flex-direction, row, column)
+		flex-direction : row
+		transition: visibility 1s, opacity .5s linear
+		&[hidden]>.menu-item
+			animation-direction: alternate
 
-	@include level-menu()
-
-	.menu-item
+	.menu-item,.small-menu-item
 		display: flex
-		height: $menu-item-size * 1rem
-		width: $menu-item-size * 1rem
+		height: $menu-item-size * 1em
+		width: $menu-item-size * 1em
+		z-index: 100
 
 		align-items: center
 		align-content: center
 		text-align: initial
-		font-size : large
+		font-size: 1em
 
-		margin : 2rem 0 0 2rem
+		margin: 2rem 0 0 2rem
 
 		background-color: $main-color
+		border : solid 1px $main-color
 		cursor: pointer
+		transition: background-color .2s
+
+		&:hover
+			border : solid 1px $main-color
+			background-color : white
+			p
+				color: $main-color
+
 
 		p
+			transition: color .2s ease-in-out
 			margin-left: 1rem
+
+.small-menu-item
+	font-size: 0.85em
+
 

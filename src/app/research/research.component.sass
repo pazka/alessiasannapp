@@ -1,0 +1,93 @@
+@import '../../variables.sass'
+
+.fragment
+	background-color: $background-color
+	>h1
+		font-size: 4em
+		margin-left : 10%
+	>h3
+		font-size: 2em
+		margin-left : 10%
+
+.content
+	display: flex
+	margin-top: 2rem
+	margin-bottom: 10rem
+	padding : 0 10%
+	width : auto
+
+	.desc
+		display: flex
+		flex-direction: column
+		padding: 1rem
+		color : $main-color
+		border : solid 4px $main-color
+		width : 20%
+
+	.pres
+		width : 80%
+		display: flex
+		flex-direction: column
+
+	.col-large
+		flex-grow: 2
+		display: flex
+		flex-direction: column
+
+	.col
+		img
+			width : 100%
+			max-width: 20rem
+			height: auto
+			max-height: 20rem
+		img.inverted
+			width : auto
+			max-width: 10rem
+			height: auto
+			max-height: 20rem
+
+	.lig
+		width : 100%
+		display: flex
+		flex-direction: row
+		img
+			width : auto
+			max-height : 10rem
+
+	.data-img
+		display : flex
+		flex : 1
+		flex-direction: column
+		padding: 0.3em
+		cursor: pointer
+		border: solid $background-color 2px
+
+		.img-name-container
+			width: 0
+			height: 0
+			position: relative
+			top : -10rem
+			.img-name
+				display: none
+
+		&.selected
+			border: solid $main-color 2px
+		&.locked
+			border: solid red 2px
+
+		&.locked,&.selected
+			.img-name-container
+				.img-name
+					background-color: rgba(255,255,255,0.7)
+					padding: 1rem
+					display: inline-table
+					position: absolute
+					width: 8rem
+
+
+
+.p5Canvas
+	display: block !important
+	flex : 1
+	width : 100%
+

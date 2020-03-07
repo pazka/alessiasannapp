@@ -30,9 +30,14 @@
             ],
             "styles": [
               "src/styles.sass",
-              "src/variables.sass"
+              "src/styles-res.sass",
+              "src/variables.sass",
+              "src/reseter.sass"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/p5/lib/p5.js",
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

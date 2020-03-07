@@ -1,0 +1,37 @@
+@import '../../variables.sass'
+
+.fragment
+	background-color: $background-color-alt
+	color: $text-color-alt
+
+.content
+	position: relative
+	padding : 0 10%
+	margin-bottom: 4rem
+	width : auto
+
+	h1
+		display: flex
+		flex-flow: column
+		font-size : 4rem
+		min-width : 50%
+		width : max-content
+		margin-bottom: 3rem
+
+
+	.description
+		display: flex
+		width : 100%
+		text-align: justify
+		font-size : 1em
+		>div
+			display: block
+			width: 33%
+			padding : 0 4rem 0 0
+
+			>*
+				margin-bottom: 1rem
+
+	video,mat-video,img
+		width : 69%
+		height: auto

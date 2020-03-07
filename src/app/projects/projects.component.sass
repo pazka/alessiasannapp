@@ -1,0 +1,63 @@
+@import '../../variables.sass'
+
+.fragment
+	overflow-y: hidden
+	margin-bottom: 0
+	padding-top: 4rem
+	width : 100%
+	display: flex
+
+.content
+	flex : 1
+	display: flex
+	overflow-y: hidden
+
+	address
+		display: flex
+		flex-direction: column
+	h1
+		display: flex
+		flex-flow: column
+		font-size : 3em
+		min-width : 50%
+		width : max-content
+	h1,h2
+		margin-bottom: 2rem
+
+
+	.description
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		width : 25%
+		text-align: justify
+		font-size : 1em
+		padding : 6rem 5% 0 5%
+
+		>div
+			display: flex
+			flex-direction: column
+			width: 100%
+
+			>*
+				margin-bottom: 1rem
+
+	.video-container
+		background-color: $background-color-alt
+		flex : 1
+		display: flex
+
+		video,mat-video,img
+			flex: 1
+
+	.video-container-container
+		width: 100%
+
+		.video-container
+			background-color: $background-color-alt
+			flex : 1
+			display: flex
+
+			video,mat-video,img
+				flex: 1
