@@ -63,6 +63,7 @@
 		border: solid $background-color 2px
 
 		.img-name-container
+			display: none
 			width: 0
 			height: 0
 			position: relative
@@ -71,9 +72,9 @@
 				display: none
 
 		&.selected
-			border: solid $main-color 2px
+			border: solid $background-color 2px
 		&.locked
-			border: solid red 2px
+			border: solid $main-color 2px 
 
 		&.locked,&.selected
 			.img-name-container

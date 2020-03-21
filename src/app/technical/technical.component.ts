@@ -98,9 +98,6 @@ export class TechnicalComponent implements OnInit {
 			}
 
 			function setGradient(x0, y0, x1, y1, x2, y2, x3, y3) {
-				p.drawingContext.setLineDash([5,5]);
-				p.strokeWeight(4);
-				p.stroke('#0018f0');
 				p.line(x0, y0, x3, y3);
 				p.line(x1,y1,x2,y2);
 				p.line(x0, y0, (x2+x3)/2, (y2+y3)/3);
@@ -110,7 +107,7 @@ export class TechnicalComponent implements OnInit {
 				p.push();
 
 				p.noFill();
-				p.strokeWeight(3);
+				p.strokeWeight(1);
 
 
 				var i = 0;
@@ -133,6 +130,13 @@ export class TechnicalComponent implements OnInit {
 					p.push();
 					p.fill('#0018f0');
 					p.ellipse(_X(spot[0]), _Y(spot[1]), 30 * zoomCoef, 30 * zoomCoef);
+
+					p.strokeWeight(1);
+					p.stroke('#0018f0');
+					var dots    = (new Array(10)).fill(5, 0, 10);
+					var index   = 1 + ((((p.frameCount / 7) % (dots.length)) / 2) | 0) * 2;
+					dots[index] = 20;
+					p.drawingContext.setLineDash(dots);
 					setGradient(_X(spot[0]), _Y(spot[1]),
 								_X(spot[0]), _Y(spot[1]),
 								_X(spot[0])+100, _Y(spot[1])+200,
@@ -143,10 +147,7 @@ export class TechnicalComponent implements OnInit {
 					p.push();
 					p.blendMode(p.SCREEN);
 					p.stroke(240);
-					var dots    = (new Array(10)).fill(5, 0, 10);
-					var index   = 1 + ((((p.frameCount / 7) % (dots.length)) / 2) | 0) * 2;
-					dots[index] = 20;
-					p.drawingContext.setLineDash(dots);
+					p.drawingContext.setLineDash([]);
 
 					p.line(
 						   _X(img_main_obj.pos[0]) + img_main_obj.size[0] * imgObj.circle[0] * zoomCoef,
@@ -197,9 +198,6 @@ export class TechnicalComponent implements OnInit {
 					img_sat,
 					img_light,
 				];
-
-
-				shadeProj = p.loadShader('assets/shader.vert', 'assets/shader.frag');
 			};
 
 			p.setup = () => {
@@ -267,10 +265,6 @@ export class TechnicalComponent implements OnInit {
 
 				drawLines();
 
-				allImgObjs.forEach((img) => {
-					p.image(img.el, _X(img.pos[0]), _Y(img.pos[1]), img.size[0] * zoomCoef, img.size[1] * zoomCoef);
-				});
-
 				//draw txt
 				p.textStyle(p.BOLD);
 				p.textSize(18);
@@ -283,6 +277,11 @@ export class TechnicalComponent implements OnInit {
 				p.textStyle(p.NORMAL);
 				p.textSize(12);
 				p.textLeading(15);
+				p.push();
+				p.noStroke();
+				p.fill(255);
+				p.rect(_X(img_sizeScale_obj.pos[0]),_Y(img_sizeScale_obj.pos[1]),img_sizeScale_obj.size[0],img_sizeScale_obj.size[1]);
+				p.pop();
 				p.text(img_sizeScale_obj.desc,
 					   _X(img_sizeScale_obj.pos[0]),
 					   _Y(img_sizeScale_obj.pos[1]) + img_sizeScale_obj.size[1] * zoomCoef + 10,
@@ -311,10 +310,15 @@ export class TechnicalComponent implements OnInit {
 					   250 * zoomCoef
 				);
 
+				//draw images
+				allImgObjs.forEach((img) => {
+					p.image(img.el, _X(img.pos[0]), _Y(img.pos[1]), img.size[0] * zoomCoef, img.size[1] * zoomCoef);
+				});
+
 				//draw UI
 				p.textStyle(p.BOLD);
 				p.textSize(40);
-				p.text(descTitle, _X(0.048), _Y(0.06));
+				p.text(descTitle, _X(0.041), _Y(0.06));
 
 				resetTmpIndicator();
 			};

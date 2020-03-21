@@ -183,20 +183,22 @@ export class ResearchComponent implements OnInit {
 				});
 			}
 
-			function drawRecursiveData(_rawImgDatas, orig) {
+			function drawRecursiveData(_rawImgDatas, orig,isJustVertex) {
 				p.fill(255, 255, 255, 255);
 				p.stroke(0, 0, 255);
 				p.strokeWeight(4);
 
 				_rawImgDatas.forEach((imgData) => {
 					incrSway(imgData.imgId.split('').map(c => c.charCodeAt(0)).reduce((a, c) => (a + c)));
-					if (orig) {
+					if (orig && !isJustVertex) {
 						p.line(orig[0], orig[1], _X(imgData.pos[0]) + sway[0], _Y(imgData.pos[1]) + sway[1]);
 					}
-					p.ellipse(_X(imgData.pos[0]) + sway[0], _Y(imgData.pos[1]) + sway[1], circleSize * zoomCoef, circleSize * zoomCoef);
+					if(isJustVertex){
+						p.ellipse(_X(imgData.pos[0]) + sway[0], _Y(imgData.pos[1]) + sway[1], circleSize * zoomCoef, circleSize * zoomCoef);
+					}
 
 					if (imgData.link) {
-						drawRecursiveData(imgData.link, [_X(imgData.pos[0]) + sway[0], _Y(imgData.pos[1]) + sway[1]]);
+						drawRecursiveData(imgData.link, [_X(imgData.pos[0]) + sway[0], _Y(imgData.pos[1]) + sway[1]],isJustVertex);
 					}
 				});
 			}
@@ -228,7 +230,8 @@ export class ResearchComponent implements OnInit {
 				p.fill(255, 255, 255, 155);
 				p.square(0, 0, p.width, p.height);
 				p.cursor('auto');
-				drawRecursiveData(_this.imgDatas, null);
+				drawRecursiveData(_this.imgDatas, null,false);
+				drawRecursiveData(_this.imgDatas, null,true);
 
 				if (_this.selectedData) {
 					if ((p.mouseX > _X(_this.selectedData.pos[0]) - (circleSize * zoomCoef) / 2 &&
@@ -262,8 +265,8 @@ export class ResearchComponent implements OnInit {
 				}
 
 				if (_this.clickedData) {
-					p.stroke(200, 0, 255, 155);
-					p.fill(240, 150, 150, 155);
+					p.stroke(0, 0, 255, 155);
+					p.fill(0, 0, 255, 255);
 					drawDataImg(_this.clickedData);
 				}
 

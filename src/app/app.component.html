@@ -1,6 +1,6 @@
 <header>
-    <div class="banner"><a  routerLink="./" [fragment]="'home'">[ALESSIA_SANNA // <span>SCREEN CITY]</span></a></div>
-    <nav class="navbar new-level"  [@openClose]="scrollDown ? 'closed' : 'open'">
+    <div class="banner"><img (click)="opens[1] = !opens[1]" src="assets/icons/menu.svg" alt=""><a  routerLink="./" [fragment]="'home'">[ALESSIA_SANNA // <span>SCREEN CITY]</span></a></div>
+    <nav class="navbar new-level"  [@openClose]="!opens[1] ? 'closed' : 'open'">
         <a class="menu-item" routerLink="./" [fragment]="'whatis'"><p i18n>Qu'est-ce que Screen City ?</p></a>
         <a class="menu-item" routerLink="./" [fragment]="'technical'"><p i18n>Fiche Technique</p></a>
         <a class="menu-item" (click)="opens[0] = !opens[0]"><p i18n>Projet (ctions°)</p></a>
