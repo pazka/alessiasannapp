@@ -4,9 +4,10 @@
 	background-color: $background-color
 	>h1
 		font-size: 4em
-		margin-left : 10%
 	>h3
 		font-size: 2em
+
+	>h1,>h3
 		margin-left : 10%
 
 .content
@@ -21,8 +22,9 @@
 		flex-direction: column
 		padding: 1rem
 		color : $main-color
-		border : solid 4px $main-color
-		width : 20%
+		border : solid 6px $main-color
+		width : 21%
+		margin-right : 2rem
 
 	.pres
 		width : 80%
@@ -33,6 +35,9 @@
 		flex-grow: 2
 		display: flex
 		flex-direction: column
+
+	img
+		transition: filter 0.2s ease-in-out
 
 	.col
 		img
@@ -58,9 +63,8 @@
 		display : flex
 		flex : 1
 		flex-direction: column
-		padding: 0.3em
 		cursor: pointer
-		border: solid $background-color 2px
+		border: solid $background-color 6px
 
 		.img-name-container
 			display: none
@@ -72,11 +76,15 @@
 				display: none
 
 		&.selected
-			border: solid $background-color 2px
+			border: solid $background-color 6px
+
 		&.locked
-			border: solid $main-color 2px 
+			border: solid $main-color 6px
 
 		&.locked,&.selected
+			img
+				transition: filter 0.2s ease-in-out
+				filter: brightness(150%)
 			.img-name-container
 				.img-name
 					background-color: rgba(255,255,255,0.7)

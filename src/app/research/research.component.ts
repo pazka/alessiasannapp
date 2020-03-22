@@ -211,7 +211,9 @@ export class ResearchComponent implements OnInit {
 
 
 			p.setup = () => {
-				cnv = p.createCanvas(_this.p5canvasElem.nativeElement.offsetWidth, _this.p5canvasElem.nativeElement.offsetHeight);
+				if(_this.p5canvasElem.nativeElement && _this.p5canvasElem){
+					cnv = p.createCanvas(_this.p5canvasElem.nativeElement.offsetWidth, _this.p5canvasElem.nativeElement.offsetHeight);
+				}
 
 				cnv.mouseWheel(event_changeSize);
 				cnv.mouseClicked(event_mouseClicked);

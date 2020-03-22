@@ -64,19 +64,24 @@ a
 	display: flex
 
 	letter-spacing: 0.2em
-	font-size: 1.2rem
+	font-size: 0.8rem
 	font-weight: bolder
 
 	color : white
+	cursor : pointer
+
+	&:hover
+		img
+			transition: filter 0.2s ease-in-out
+			filter: drop-shadow(2px 2px 1px black)
 
 	img
 		cursor : pointer
-		&:hover
-			fill : $main-color
 
-		height : 1.2rem
-		margin : 0.2rem 0rem 0.5rem 2rem
-		padding: 0.9em
+		height : 0.8rem
+		margin : 0.2rem 0 0.3rem 2rem
+		padding: 1em
+		transition: filter 0.2s ease-in-out
 
 	a
 		margin : 0.5rem 1rem 0.5rem 0
@@ -142,9 +147,9 @@ a
 		align-items: center
 		align-content: center
 		text-align: initial
-		font-size: 1em
+		font-size: 0.9em
 
-		margin: 2rem 0 0 2rem
+		margin: 1rem 0 0 1rem
 
 		background-color: $main-color
 		border : solid 1px $main-color
@@ -160,7 +165,8 @@ a
 
 		p
 			transition: color .2s ease-in-out
-			margin-left: 1rem
+			width: fit-content
+			margin-left: 13%
 
 .small-menu-item
 	font-size: 0.85em

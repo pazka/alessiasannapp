@@ -52,7 +52,8 @@ import {ViewportScroller} from '@angular/common';
 
 export class AppComponent {
 	title = 'Alessia Sanna Landing Page';
-	opens = [];
+	opens = [false , true];
+	firstTime = true;
 
 	constructor(private viewportScroller: ViewportScroller) {}
 
@@ -70,6 +71,12 @@ export class AppComponent {
 	scroll = (event): void => {
 		var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
 		this.scrollDown = st > this.lastScrollTop;
+
+		if(this.firstTime){
+			this.opens[1] = false;
+		}
+		this.firstTime = false;
+
 
 		this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 	};

@@ -2,6 +2,7 @@
 
 @include responsive-phone()
 	.content
+		display: flex
 		flex-direction: column
 		width : 100%
 
@@ -23,7 +24,7 @@
 		flex : 1
 		display: flex
 
-		video,mat-video,img
+		video,img
 			flex: 1
 
 @include responsive-tablet()
@@ -71,5 +72,12 @@
 			flex : 1
 			display: flex
 
-			video,mat-video,img
+			video,img
 				flex: 1
+
+@include responsive-zoomed-desktop()
+
+	.content
+		.description
+			font-size: 0.9em
+			padding : 3.5rem 5% 0 5%

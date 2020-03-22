@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="c592133458db3d98c1b4f4e8a273d29d772e9c5f" datatype="html">
+        <source>Qu&apos;est-ce que Screen City ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="82c8aa0f5ebec2a92973789f6dee98317312803e" datatype="html">
+        <source>Fiche Technique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e9eb7a0c74c5d828acb37cec3524c668d2ea7b5c" datatype="html">
+        <source>Projet (ctions°)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1169135050b86cc92b87360946c19423f6b33e87" datatype="html">
+        <source>S.C New York</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="635415d866c270ecdd5f03a78376985102b120db" datatype="html">
+        <source>Mapping</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5fbadca29d84c5cfd104c97cb6713cf802824774" datatype="html">
+        <source>Bio / Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1c471c5fd9128fce2e8605cc098dec3a4c4d85cf" datatype="html">
+        <source>
+        VIDEO MAPPING
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="36cf93fcf917bd0a08d79379c905cdb4f79b267e" datatype="html">
+        <source>(Light pollution)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="26c267bd65361b45b212cd713c1e0a4d3dd53097" datatype="html">
+        <source>Séquence du vidéo mapping
+                        Screen City New York:
+                        scénarios de croissance
+                        démographique
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62c82aa4128901386911782e527f3479183078c0" datatype="html">
+        <source>Programmation informatique
+                        de Screen City New York
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e1e4ae69ff34185554d3dd6902e567f97a490386" datatype="html">
+        <source>Screen Shot carte du
+                        recensement New York 2019
+                        Screen City_Ny
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9ac77e495c5c7735d01933dad7d3bea04cd8eacd" datatype="html">
+        <source>Screen City_Ny (vue sur l’installation)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e03637c4e06cdd0b3351e7e8139d7917b8dedb8a" datatype="html">
+        <source>Screen City_Ny (focus)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52e8c92b56bd7a97096b21a5d8b5e767a402aaa8" datatype="html">
+        <source>Screen Shot Nasa
+                            (Pollution lumineuse New York)
+                        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1123a9129bfa6de98f6f2e9d2c1cbe8e0b8f4750" datatype="html">
+        <source>Zoom pollution lumineuse
+                            New York (inspiration pour conception vidéo)
+                        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7d4fb2c524b107eb928f12b3c1ab7a107bb162d2" datatype="html">
+        <source>Encéphalogramme d’une crise
+                            cardiaque: Inspiration pour
+                            rythme d’apparition des données
+                        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/research/research.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fd12357d61d5ae45e540f6efaef08b617f41ddea" datatype="html">
+        <source>
+                Bio / Contact
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bio/bio.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="240977017e0005e7f57d4abe84647705ec494fb9" datatype="html">
+        <source>Alessia Sanna est née le 22 juillet 1995 à Mulhouse. Sa passion pour la sculpture et la
+                        peinture
+                        se manifestent très tôt et, à 15 ans, elle s’oriente dans une filière littéraire et artistique.
+                        Elle
+                        se rend ensuite à Strasbourg où, durant 5 ans, elle suit un cursus universitaire afin de devenir
+                        artiste chercheuse.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bio/bio.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ba51f1b2ea494f30f6cc8ffb2aa86a625223b02b" datatype="html">
+        <source>Durant cette période, l’artiste développe sa pratique sculpturale, qu’elle hybride au
+                        numérique.
+                        Elle s’interroge alors sur un rapport au monde façonné par les technologies de l’information et
+                        de
+                        la communication. Ce questionnement, elle l’aborde également au travers de l’œuvre Screen City,
+                        qu’elle approfondit durant 1 an au sein de l’incubateur Fluxus.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bio/bio.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a1c2f35235640100808c68a80bd2c92df62238a5" datatype="html">
+        <source> La ville est mouvement, </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="777e1ca8cad16e9b9ee7aa871a51722333b89114" datatype="html">
+        <source> la ville est lumière </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="33da18164f979c7da83b22cb2eb4e042d6052025" datatype="html">
+        <source> Screen city_NY est une vidéo-sculpture hybridant représentation sculpturale de la
+                    ville et technique
+                    de mapping vidéo ; mais il s’agit surtout d’une vision poétique de la ville de demain, où
+                    l’interprétation
+                    de données territoriales interroge sur le devenir de l’Homme à l’heure de l’anthropocène.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="840b623c152266e3b9adf1b148bd9bb824788fef" datatype="html">
+        <source>Depuis les abysses rayonne Screen City. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bbd5c339d57c2054e6d99b0c305dd6d0bbb8ab61" datatype="html">
+        <source>Arborant une architecture épurée mais dense, la ville est perceptible depuis ses plus hauts sommets. À la nuit tombée, la vie humaine s’active. De là où nous sommes, il est presque possible d’apercevoir chaque être qui anime la ville. Les âmes scintillent dans « la grande pomme ». À l’unisson, des millions de particules lumineuses dansent en cœur en un seul et même rythme. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="095661923bbc23c322571ff12e9985b62f22477a" datatype="html">
+        <source>La ville pulse, la ville bat, la ville vit. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a9b00154589abe6fddbe8e50eafddf3cd933e234" datatype="html">
+        <source>Ce soir, Screen City est une ville bleue, une ville mouvement, une ville lumière. Une péninsule merveilleuse et catastrophique à la fois, se faisant le reflet sublime d’une vie urbaine toujours plus vorace. Spectateur impuissant, observateur fasciné, je la vois; elle respire. J’entends son souffle qui s’essouffle. Elle s’étend et se détend. La pollution lumineuse émanant de ce paysage électrique m’interpelle :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b631b43122e01246b2b4fdd32e4ed483b0df0e2b" datatype="html">
+        <source>Plus l’homme détruit, plus il brille. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f467b981994e69c8372cc191fa9f6661e487dbdf" datatype="html">
+        <source>Et devant moi défilent les années sans que jamais ne ternissent les lumières. Jusqu’à cette nuit de l’an 2100. Inquiet, je m’endors, me demandant si demain les humains seront à nouveau au rendez-vous. Continueront-ils de danser comme les étoiles ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="53a60dad5488ed71a69865b794d3b1679b799230" datatype="html">
+        <source> Pensée d’un satellite face à l’effondrement à venir.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/what-is/what-is.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="896bd56839e04c3b648bd767c2282c9df26a5580" datatype="html">
+        <source>
+                Screen City_NY
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aee87ee47a92169babf8ea14bb8b8af16507ce0b" datatype="html">
+        <source>SCREEN CITY, FIGURE D’UNE VILLE AU BORD DE L’EFFONDREMENT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="921c7be62d2a16dc9933380ef6592fd851108ad0" datatype="html">
+        <source>Au temps de l’homme comme source de variations multiples et complexes, Screen City_NY propose un regard poétique et critique sur le devenir fragile des villes d’ici 2100. Plaçant l’humain au centre de toutes les attentions, cette œuvre cartographique remonte les traces de nos données géographiques et interroge : quelles formes prendront les modes de vie métropolitaine de demain ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="05fcf820b1efe8e3f585b400164c95530d700ac4" datatype="html">
+        <source>Proposée autour d’un focus sur la ville de New York, cette œuvre rapporte une vision inquiétante sur l’inévitable croissance des populations urbaines et de leurs répercutions mesurables à long terme. Asséchées par l’Homme, que restera-t-il de nos ressources énergétiques à l’avenir et qu’adviendra-t-il alors de notre civilisation ? À l’image d’un cœur malade, saturé et à bout de souffle, comment la ville survivra-t-elle à ses habitants et comment ses habitants lui survivront-elle ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f727f65f01ec7a4c2f900b3cd722866976298868" datatype="html">
+        <source>Dans ce scénario où chaque humain représente une dépense énergétique, Screen City_NY se présente ainsi comme une synthèse d’actions humaines faisant de la ville un paysage sensible au destin incertain.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/projects/projects.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f9ecd9b1b9eb2d39fab7e758ed405918fa80d826" datatype="html">
+        <source> DESCRIPTIF</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/technical/technical.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ba6328ec918ad7f2c805257c52b34ce3603618e8" datatype="html">
+        <source>Dans ce processus de création, une matrice est imprimée en 3D avant d’être moulée en silicone, permettant de couler en plâtre des modules de 1,5 à 7,5 cm de haut. Ces volumes représentent des données de densité de population (NASA) dont la forme et la taille se calquent sur le cas de la ville de New York.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/technical/technical.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1827936c863bab8e63cb5ecc07ab65e3393214ad" datatype="html">
+        <source>L’installation se déployant au sol, cette proposition suit donc un montage rigoureux, respectant minutieusement un carroyage chromatique reprenant la répartition du nombre d’habitants sur le territoire (2). Plus de 15000 modules sont ainsi installés in situ, couvrant une surface de 30 m². Répartis de la sorte, ces micro-édifices forment une pluralité d’îlots et de dorsales en corrélation avec le plan de zonage territorial.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/technical/technical.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b3dcc7afe8bb1157c367faf3b107f3565a9cbf25" datatype="html">
+        <source>Traduites en signaux lumineux, les données génèrent ici un mouvement lent, global, hypnotique.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/technical/technical.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b98727e1559aaa0e392ab164e8a22dcfd1e8615a" datatype="html">
+        <source>Sur la structure de plâtre se juxtapose un mapping vidéo dont le visuel est directement créé à partir de données territoriales temporelles et géolocalisables.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/technical/technical.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b6e42c36fc37778d694376531a21e9025671c82b" datatype="html">
+        <source>Inspirée de l’imagerie satellitaire, Screen City_NY transforme la data en pollution lumineuse, activant ainsi la ville immergée dans l’obscurité.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/technical/technical.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c2391ded16e1eaeda884c125dcb9b91b31d0c946" datatype="html">
+        <source>Entre procédés de moulage traditionnels et technique de vidéo-mapping, Screen City est une data-sculpture mettant en lumière les évolutions démographiques dans la ville de New York.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/technical/technical.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

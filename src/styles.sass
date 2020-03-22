@@ -9,8 +9,26 @@
 html
 	scroll-behavior: smooth
 
-body::-webkit-scrollbar-track
-	background-color: rgba(0,0,0,0)
+body
+	/* width */
+	&::-webkit-scrollbar
+		width: 10px
+
+
+	/* Track */
+	&::-webkit-scrollbar-track
+		background-color: #000000
+		opacity: 0
+		width: 0
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb
+		background: #0018f0
+
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover
+		background: #0010A8
 
 .hide-mobile
 	display: inherit !important
@@ -28,6 +46,8 @@ body::-webkit-scrollbar-track
 
 .fragment.no-padding
 	padding-top: 0
+
+
 
 *
 	visibility: visible

@@ -16,6 +16,12 @@ export class TechnicalComponent implements OnInit {
 
 	@ViewChild('p5canvas') p5canvasElem: ElementRef;
 
+	ngOnDestroy(): void{
+		this.p5.reloadCanvas
+	}
+
+	//TODO : rewrtie position algorithm
+	//TODO : resize mobile
 	ngOnInit(): void {
 		var _this = this;
 
@@ -201,8 +207,9 @@ export class TechnicalComponent implements OnInit {
 			};
 
 			p.setup = () => {
-				cnv = p.createCanvas(_this.p5canvasElem.nativeElement.offsetWidth, _this.p5canvasElem.nativeElement.offsetHeight);
-				p.imageMode(p.CORNER);
+				if(_this.p5canvasElem.nativeElement && _this.p5canvasElem){
+					cnv = p.createCanvas(_this.p5canvasElem.nativeElement.offsetWidth, _this.p5canvasElem.nativeElement.offsetHeight);
+				}
 				//cnv.mouseWheel(event_changeSize);
 				//cnv.mouseClicked(event_mouseClicked);
 				//cnv.touchStarted(event_startDrag);

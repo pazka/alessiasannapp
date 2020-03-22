@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "int:extract": "ng xi18n --output-path src/locale"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +25,6 @@
     "@angular/router": "~9.0.2",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
-    "mat-video": "^2.7.2",
     "p5": "^1.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

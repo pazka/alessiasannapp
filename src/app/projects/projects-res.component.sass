@@ -9,7 +9,7 @@
 			margin-bottom: 1rem
 
 		.description
-			width : 90%
+			min-width: 20%
 			display: flex
 			flex-flow: column
 			font-size: 1em
@@ -22,34 +22,33 @@
 				>*
 					margin-bottom: 1rem
 
-	.video-container
-		display: flex
-		margin-bottom: 1rem
+		.video-container
+			display: flex
+			margin-bottom: 1rem
 
-		video,mat-video,img
-			flex: 1
+			video,img
+				width: 100%
+				height: auto
 
 @include responsive-tablet()
 	.content
 		flex : 1
 		display: flex
 		overflow-y: hidden
+		font-size: 0.8em
+
 
 		address
 			display: flex
 			flex-direction: column
 
 		.description
-			width : 33%
-
 			>div
 				>*
 					margin-bottom: 1rem
 
-		.video-container
-			background-color: $background-color-alt
-			flex : 1
-			display: flex
-
-			video,mat-video,img
-				flex: 1
+@include responsive-zoomed-desktop()
+	.content
+		.description
+			min-width: 23%
+			font-size: 0.9em

@@ -10,6 +10,8 @@ export class P5ManagerService {
 	constructor() {
 	}
 
+	//TODO Canvas instance stabilisation
+
 	reloadCanvas(idDom, sketch) {
 		if (!sketch) {
 			sketch = (s) => {

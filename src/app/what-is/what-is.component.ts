@@ -10,6 +10,7 @@ export class WhatIsComponent implements OnInit {
 	constructor() {
 	}
 
+	//TODO : Animation
 	ngOnInit(): void {
 	}
 
