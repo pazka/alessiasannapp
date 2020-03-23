@@ -49,6 +49,7 @@ export class TechnicalComponent implements OnInit {
 			var tmpPos;
 			var sway         = [0, 0];
 			var spot         = [0, 0];
+			var spot_title;
 
 			function incrSway(i = 0) {
 				sway[0] = p.sin(i + p.frameCount / 350);
@@ -178,12 +179,14 @@ export class TechnicalComponent implements OnInit {
 					size  : [0, 0],
 					el    : img_sizeSacle,
 					desc  : p.select('#scale').html(),
+					title  : p.select('#scale_title').html(),
 					circle: [0.75, 0.40, 8]
 				};
-				img_colorScale_obj = {pos: [0, 0], size: [0, 0], el: img_colorScale};
-				img_floor_obj      = {pos: [0, 0], size: [0, 0], el: img_floor, desc: p.select('#tapis').html(), circle: [0.65, 0.70, 6]};
-				img_sat_obj        = {pos: [0, 0], size: [0, 0], el: img_sat, desc: p.select('#sat').html(), circle: [0.58, 0.10, 3]};
-				img_light_obj      = {pos: [0, 0], size: [0, 0], el: img_light, desc: p.select('#light').html(), circle: [0.35, 0.30, 5]};
+				img_colorScale_obj = {pos: [0, 0], size: [0, 0], el: img_colorScale, title: p.select('#colorScale_title').html()};
+				img_floor_obj      = {pos: [0, 0], size: [0, 0], el: img_floor, desc: p.select('#tapis').html(), title: p.select('#tapis_title').html(), circle: [0.65, 0.70, 6]};
+				img_sat_obj        = {pos: [0, 0], size: [0, 0], el: img_sat, desc: p.select('#sat').html(), title: p.select('#sat_title').html(), circle: [0.58, 0.10, 3]};
+				img_light_obj      = {pos: [0, 0], size: [0, 0], el: img_light, desc: p.select('#light').html(), title: p.select('#light_title').html(), circle: [0.35, 0.30, 5]};
+				spot_title = p.select("#spot_title").html();
 
 				allImgObjs = [
 					img_sizeScale_obj,
@@ -246,6 +249,7 @@ export class TechnicalComponent implements OnInit {
 					size  : [720 / 1920 * p.width / 2, 480 / 1080 * p.height / 2],
 					el    : p.select('#vid_desc'),
 					desc  : p.select('#vid').html(),
+					title  : p.select('#vid_title').html(),
 					circle: [0.18, 0.15, 2]
 				};
 				vid_desc_obj.el.loop();
@@ -298,6 +302,7 @@ export class TechnicalComponent implements OnInit {
 				);
 
 				p.textSize(12);
+
 				p.text(vid_desc_obj.desc,
 					   (vid_desc_obj.pos[0]) + vid_desc_obj.size[0] * zoomCoef + 10,
 					   (vid_desc_obj.pos[1]) + 10,
@@ -313,11 +318,47 @@ export class TechnicalComponent implements OnInit {
 					   (img_light_obj.pos[1]) + 50,
 					   250 * zoomCoef
 				);
+				p.textSize(14);
+				p.text(img_floor_obj.title,
+					   (img_floor_obj.pos[0] - 20),
+					   (img_floor_obj.pos[1] - 18),
+					   img_floor_obj.size[0]
+				);
+				p.text(img_colorScale_obj.title,
+					   (img_colorScale_obj.pos[0] - 85),
+					   (img_colorScale_obj.pos[1] - 16),
+					   img_colorScale_obj.size[0]
+				);
+				p.text(vid_desc_obj.title,
+					   (vid_desc_obj.pos[0]) ,
+					   (vid_desc_obj.pos[1]) - 20,
+					   250 * zoomCoef
+				);
+				p.text(img_sat_obj.title,
+					   (img_sat_obj.pos[0]) ,
+					   (img_sat_obj.pos[1]) - 20,
+					   250 * zoomCoef
+				);
 
 				//draw images
 				allImgObjs.forEach((img) => {
-					p.image(img.el, (img.pos[0]), (img.pos[1]), img.size[0] * zoomCoef, img.size[1] * zoomCoef);
+					p.image(img.el, (img.pos[0]), (img.pos[1]), img.size[0] , img.size[1] );
 				});
+
+				p.text(img_light_obj.title,
+					   (img_light_obj.pos[0]),
+					   (img_light_obj.pos[1]) +30 ,
+					   250 * zoomCoef
+				);
+				p.text(img_sizeScale_obj.title,
+					   (img_sizeScale_obj.pos[0]),
+					   (img_sizeScale_obj.pos[1] + 20) ,
+					   img_sizeScale_obj.size[0]
+				);
+				p.text(spot_title,
+					   (spot[0] - 40),
+					   (spot[1] - 30)
+				);
 
 				//draw UI
 				p.textStyle(p.BOLD);
@@ -356,6 +397,7 @@ export class TechnicalComponent implements OnInit {
 			var tmpPos;
 			var sway         = [0, 0];
 			var spot         = [0, 0];
+			var spot_title;
 
 			function incrSway(i = 0) {
 				sway[0] = p.sin(i + p.frameCount / 350);
@@ -485,12 +527,13 @@ export class TechnicalComponent implements OnInit {
 					size  : [0, 0],
 					el    : img_sizeSacle,
 					desc  : p.select('#scale').html(),
+					title  : p.select('#scale_title').html(),
 					circle: [0.75, 0.40, 8]
 				};
-				img_colorScale_obj = {pos: [0, 0], size: [0, 0], el: img_colorScale};
-				img_floor_obj      = {pos: [0, 0], size: [0, 0], el: img_floor, desc: p.select('#tapis').html(), circle: [0.65, 0.70, 4]};
-				img_sat_obj        = {pos: [0, 0], size: [0, 0], el: img_sat, desc: p.select('#sat').html(), circle: [0.35, 0.30, 3]};
-				img_light_obj      = {pos: [0, 0], size: [0, 0], el: img_light, desc: p.select('#light').html(), circle: [0.58, 0.10, 2]};
+				img_colorScale_obj = {pos: [0, 0], size: [0, 0], el: img_colorScale,title : p.select('#colorScale_title').html() };
+				img_floor_obj      = {pos: [0, 0], size: [0, 0], el: img_floor, desc: p.select('#tapis').html(),title : p.select('#tapis_title').html() , circle: [0.65, 0.70, 4]};
+				img_sat_obj        = {pos: [0, 0], size: [0, 0], el: img_sat, desc: p.select('#sat').html(),title : p.select('#sat_title').html() , circle: [0.35, 0.30, 3]};
+				img_light_obj      = {pos: [0, 0], size: [0, 0], el: img_light, desc: p.select('#light').html(),title : p.select('#light_title').html() , circle: [0.58, 0.10, 2]};
 
 				allImgObjs = [
 					img_sizeScale_obj,
@@ -519,7 +562,7 @@ export class TechnicalComponent implements OnInit {
 				img_colorScale_obj.size[0] = 420 / 1920 * p.width;
 				img_floor_obj.size[0]      = 600 / 1920 * p.width;
 				img_sat_obj.size[0]        = 400 / 1920 * p.width;
-				img_light_obj.size[0]      = 550 / 1920 * p.width;
+				img_light_obj.size[0]      = 800 / 1920 * p.width;
 
 				img_main_obj.pos = [0.10 * p.width, 0.18 * p.height];
 
@@ -528,9 +571,10 @@ export class TechnicalComponent implements OnInit {
 				img_floor_obj.pos      = [0.50 * p.width, 0.48 * p.height];
 
 				img_sat_obj.pos   = [0.1 * p.width, 0.80 * p.height];
-				img_light_obj.pos = [0.2 * p.width, 0.90 * p.height];
+				img_light_obj.pos = [0.12 * p.width, 0.90 * p.height];
 
 				spot         = [0.9 * p.width, 0.14 * p.height];
+				spot_title   = p.select('#spot_title').html();
 
 				var i = 0;
 
@@ -545,6 +589,7 @@ export class TechnicalComponent implements OnInit {
 					size  : [100  , 66 ],
 					el    : p.select('#vid_desc'),
 					desc  : p.select('#vid').html(),
+					title  : p.select('#vid_title').html(),
 					circle: [0.18, 0.15, 2]
 				};
 				vid_desc_obj.el.loop();
@@ -613,11 +658,52 @@ export class TechnicalComponent implements OnInit {
 					   160
 				);
 
+				p.textSize(14);
+				p.text(img_floor_obj.title,
+					   (img_floor_obj.pos[0] - 70),
+					   (img_floor_obj.pos[1] + 10),
+					   img_floor_obj.size[0]
+				);
+				p.text(img_colorScale_obj.title,
+					   (img_colorScale_obj.pos[0] - 85),
+					   (img_colorScale_obj.pos[1] - 16),
+					   img_colorScale_obj.size[0]
+				);
+				p.text(vid_desc_obj.title,
+					   (vid_desc_obj.pos[0]) ,
+					   (vid_desc_obj.pos[1]) - 20,
+					   250 * zoomCoef
+				);
+				p.text(img_sat_obj.title,
+					   (img_sat_obj.pos[0]) ,
+					   (img_sat_obj.pos[1]) - 20,
+					   250 * zoomCoef
+				);
+
 				//draw images
 				allImgObjs.forEach((img) => {
-					p.image(img.el, (img.pos[0]), (img.pos[1]), img.size[0] * zoomCoef, img.size[1] * zoomCoef);
+					p.image(img.el, (img.pos[0]), (img.pos[1]), img.size[0] , img.size[1] );
 				});
 
+				p.text(img_light_obj.title,
+					   (img_light_obj.pos[0] - 10),
+					   (img_light_obj.pos[1])  ,
+					   250 * zoomCoef
+				);
+				p.text(img_sizeScale_obj.title,
+					   (img_sizeScale_obj.pos[0] + 10),
+					   (img_sizeScale_obj.pos[1] ) ,
+					   img_sizeScale_obj.size[0]
+				);
+				p.push();
+				p.textSize(13);
+				p.textAlign(p.RIGHT);
+				p.text(spot_title,
+					   (spot[0] -5),
+					   (spot[1] - 50),
+					   40
+				);
+				p.pop();
 				//draw UI
 				p.textStyle(p.BOLD);
 				p.textSize(40);
