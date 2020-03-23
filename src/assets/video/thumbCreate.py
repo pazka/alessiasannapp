@@ -18,7 +18,7 @@ for r, d, f in os.walk(path):
 
 for f in files:
     print(f)
-    video = VideoFileClip(f).without_audio()
+    <video = VideoFileClip(f).without_audio()
     fname = f.rsplit('.')
     print('.'.join(fname[0:len(fname)-1]) + "_thumbnail.jpeg")
     video.save_frame('.'.join(fname[0:len(fname)-1]) + "_thumbnail.jpeg",10)

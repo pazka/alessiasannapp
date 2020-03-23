@@ -3,6 +3,87 @@
 $menu-item-size: 6
 
 
+.container
+	cursor: pointer
+	position: fixed
+	width: 100%
+	height: 102%
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-ms-flex-wrap: wrap
+	flex-wrap: wrap
+	-webkit-box-orient: horizontal
+	-webkit-box-direction: normal
+	-ms-flex-direction: row
+	flex-direction: row
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	z-index: 550
+	background-color: rgba(0,0,0,1)
+
+	.thumbex
+		width: 100%
+		-webkit-flex: 1
+		-ms-flex: 1
+		flex: 1
+		overflow: hidden
+		outline: 2px solid white
+		outline-offset: -15px
+		background-color: black
+		box-shadow: 5px 10px 40px 5px rgba(0,0,0,0.5)
+
+		.thumbnail
+			overflow: hidden
+			width: 100%
+			height: 100%
+			position: relative
+			opacity: 0.88
+			backface-visibility: hidden
+			transition: all 0.4s ease-out
+
+
+			img
+				position: absolute
+				z-index: 1
+				left: 50%
+				top: 50%
+				height: 115%
+				width: auto
+				transform: translate(-50%, -50%)
+				backface-visibility: hidden
+
+
+			span
+				position: absolute
+				z-index: 2
+				top: 25%
+				left: 0
+				right: 0
+				margin: auto
+				width: 20%
+				background: rgba(0,0,0,0.2)
+				padding: 10px 50px
+				text-align: center
+				font-size: 24px
+				color: white
+				font-weight: 300
+				font-family: $title-font
+				letter-spacing: 0.2px
+				opacity: 0
+				transition: all 0.3s ease-out
+
+
+			&:hover
+				backface-visibility: hidden
+				transform: scale(1.15, 1.15)
+				opacity: 1
+
+				span
+					opacity: 1
+
+
 @mixin delay-enter($cnt : 1)
 	@for $i from 1 through 8
 		&>.menu-item:nth-child(#{$i}).enter

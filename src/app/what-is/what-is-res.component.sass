@@ -47,17 +47,22 @@
 @include responsive-tablet()
 	.content
 		.description
-			display: flex
-			flex-direction: column
+			.poem
+				margin-left: 25%
+				width: 115%
 
-			>div
-				display: block
-				width: 100%
-				padding : 0
+			.text
+				width: 115%
+				.video-container
+
+					video,img
+						top: -2rem
+						width: 319%
+						left: -149%
 
 @include responsive-zoomed-desktop()
 	.content
-		.description
+		.descriptiont
 			display: flex
 			width: 100%
 			height: auto

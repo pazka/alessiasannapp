@@ -6,11 +6,13 @@ import {environment} from './environments/environment';
 
 import {registerLocaleData} from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import localeEn from '@angular/common/locales/en';
+import localeIt from '@angular/common/locales/it';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localeFr, 'fr');
-registerLocaleData(localeFr, 'en');
-registerLocaleData(localeFr, 'it');
+registerLocaleData(localeEn, 'en');
+registerLocaleData(localeIt, 'it');
 
 if (environment.production) {
 	enableProdMode();

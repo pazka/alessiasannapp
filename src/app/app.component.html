@@ -1,17 +1,31 @@
 <header>
-    <div class="banner" (click)="opens[1] = !opens[1]"><img src="assets/icons/menu.svg" alt=""><a ><span>[ALESSIA_SANNA //</span> <span>SCREEN CITY]</span></a></div>
-    <nav class="navbar new-level"  [@openClose]="!opens[1] ? 'closed' : 'open'">
-        <a class="menu-item" routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'whatis'"><p i18n>Qu'est-ce que Screen City ?</p></a>
-        <a class="menu-item" routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'technical'"><p i18n>Fiche Technique</p></a>
+    <div class="banner" (click)="opens[1] = !opens[1]"><img src="assets/icons/menu.svg" alt=""><a><span>[ALESSIA_SANNA //</span>
+        <span>SCREEN CITY]</span></a></div>
+    <nav class="navbar new-level" [@openClose]="!opens[1] ? 'closed' : 'open'">
+        <a class="menu-item" routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'whatis'"><p i18n>Qu'est-ce que
+            Screen City ?</p></a>
+        <a class="menu-item" routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'technical'"><p i18n>Fiche
+            Technique</p></a>
         <a class="menu-item" (click)="opens[0] = !opens[0]"><p i18n>Projet (ctions°)</p></a>
         <div class="new-level pojections-links " [@openCloseHeight]="opens[0]? 'open' : 'closed'">
             <div>
-                <a class="menu-item" routerLink="projects/ny" (click)="opens[1] = !opens[1]" [fragment]="'projects'" ><p i18n>S.C New York</p></a>
+                <a class="menu-item" routerLink="projects/ny" (click)="(opens[1] = !opens[1]) && (opens[0] = !opens[0])" [fragment]="'projects'"><p
+                        i18n>S.C New York</p></a>
             </div>
         </div>
-        <a class="menu-item " routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'research'"><p i18n>Mapping</p></a>
-        <a class="menu-item" routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'bio'"><p i18n>Bio / Contact</p></a>
+        <a class="menu-item " routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'research'"><p i18n>Mapping</p>
+        </a>
+        <a class="menu-item" routerLink="./" (click)="opens[1] = !opens[1]" [fragment]="'bio'"><p i18n>Bio / Contact</p>
+        </a>
     </nav>
 </header>
+<!--div (click)="clearLoading()" id="loading-enter" class="container">
+    <div class="thumbex">
+        <div class="thumbnail">
+            <a > <img src="assets/images/enter.jpg" alt=""> <span i18n> ENTER </span></a>
+        </div>
+    </div>
+</div-->
+
 
 <router-outlet></router-outlet>
