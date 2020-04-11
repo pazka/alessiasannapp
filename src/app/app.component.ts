@@ -1,5 +1,6 @@
 import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
 
+
 import {
 	trigger,
 	state,
@@ -9,6 +10,7 @@ import {
 }                         from '@angular/animations';
 import {P5ManagerService} from './services/p5-manager.service';
 import {ViewportScroller} from '@angular/common';
+import {NgsRevealConfig}  from 'ngx-scrollreveal';
 
 @Component({
 			   selector   : 'app-root',
@@ -47,7 +49,7 @@ import {ViewportScroller} from '@angular/common';
 					   ])
 				   ]),
 			   ],
-			   providers  : [P5ManagerService]
+			   providers  : [P5ManagerService,NgsRevealConfig]
 		   })
 
 export class AppComponent implements OnInit {
@@ -55,7 +57,12 @@ export class AppComponent implements OnInit {
 	opens     = [false, true];
 	firstTime = true;
 
-	constructor(private viewportScroller: ViewportScroller) {
+	constructor(private viewportScroller: ViewportScroller,config: NgsRevealConfig) {
+		// customize default values of ngx-scrollreveal directives used by this component tree
+		config.duration = 5000;
+		config.easing = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+
+		//other options here
 	}
 
 	ngOnInit() {

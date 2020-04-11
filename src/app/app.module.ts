@@ -11,6 +11,7 @@ import {WhatIsComponent} from './what-is/what-is.component';
 import {ProjectsComponent} from './projects/projects.component';
 import { TechnicalComponent } from './technical/technical.component';
 import { HomeComponent } from './home/home.component';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 
 @NgModule({
@@ -26,10 +27,12 @@ import { HomeComponent } from './home/home.component';
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		NgsRevealModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
 })
 export class AppModule {
+
 }

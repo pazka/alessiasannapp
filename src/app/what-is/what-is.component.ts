@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit}                                   from '@angular/core';
 
 @Component({
 			   selector   : 'app-what-is',
@@ -10,7 +10,6 @@ export class WhatIsComponent implements OnInit {
 	constructor() {
 	}
 
-	//TODO : Animation
 	ngOnInit(): void {
 	}
 

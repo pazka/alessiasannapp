@@ -319,6 +319,7 @@ export class TechnicalComponent implements OnInit {
 					   250 * zoomCoef
 				);
 				p.textSize(14);
+				p.textStyle(p.BOLD);
 				p.text(img_floor_obj.title,
 					   (img_floor_obj.pos[0] - 20),
 					   (img_floor_obj.pos[1] - 18),
@@ -400,8 +401,8 @@ export class TechnicalComponent implements OnInit {
 			var spot_title;
 
 			function incrSway(i = 0) {
-				sway[0] = p.sin(i + p.frameCount / 350);
-				sway[1] = -p.abs((p.sin(i + p.frameCount / 350)));
+				sway[0] = p.sin(i + p.frameCount*5 / 350);
+				sway[1] = -p.abs((p.sin(i + p.frameCount*5 / 350)));
 			}
 
 			function resetTmpIndicator() {
@@ -485,7 +486,7 @@ export class TechnicalComponent implements OnInit {
 					p.strokeWeight(1);
 					p.stroke('#0018f0');
 					var dots    = (new Array(10)).fill(5, 0, 10);
-					var index   = 1 + ((((p.frameCount / 7) % (dots.length)) / 2) | 0) * 2;
+					var index   = 1 + ((((p.frameCount * 5 / 7) % (dots.length)) / 2) | 0) * 2;
 					dots[index] = 20;
 					p.drawingContext.setLineDash(dots);
 					setGradient((spot[0]), (spot[1]),
@@ -553,6 +554,7 @@ export class TechnicalComponent implements OnInit {
 			};
 
 			p.setup = () => {
+				p.frameRate(5);
 				if(_this.p5canvasElem.nativeElement && _this.p5canvasElem){
 					cnv = p.createCanvas(_this.p5canvasElem.nativeElement.offsetWidth, _this.p5canvasElem.nativeElement.offsetHeight);
 				}
@@ -658,6 +660,7 @@ export class TechnicalComponent implements OnInit {
 					   160
 				);
 
+				p.textStyle(p.BOLD);
 				p.textSize(14);
 				p.text(img_floor_obj.title,
 					   (img_floor_obj.pos[0] - 70),
