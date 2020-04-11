@@ -18,6 +18,6 @@ if (environment.production) {
 	enableProdMode();
 }
 
-//TODO use scroll bar correct
+//TODO use correct scrollbar
 platformBrowserDynamic().bootstrapModule(AppModule)
 	.catch(err => console.error(err));
