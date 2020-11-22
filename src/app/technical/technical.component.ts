@@ -166,12 +166,12 @@ export class TechnicalComponent implements OnInit {
 			}
 
 			p.preload = () => {
-				img_main       = p.loadImage('../../assets/images/technical/main_ny.png');
-				img_sizeSacle  = p.loadImage('../../assets/images/technical/size_scale.png');
-				img_colorScale = p.loadImage('../../assets/images/technical/color_scale.jpg');
-				img_floor      = p.loadImage('../../assets/images/technical/tapis.png');
-				img_sat        = p.loadImage('../../assets/images/technical/sat.jpg');
-				img_light      = p.loadImage('../../assets/images/technical/nycity.png');
+				img_main       = p.loadImage('assets/images/technical/main_ny.png');
+				img_sizeSacle  = p.loadImage('assets/images/technical/size_scale.png');
+				img_colorScale = p.loadImage('assets/images/technical/color_scale.jpg');
+				img_floor      = p.loadImage('assets/images/technical/tapis.png');
+				img_sat        = p.loadImage('assets/images/technical/sat.jpg');
+				img_light      = p.loadImage('assets/images/technical/nycity.png');
 
 				img_main_obj       = {pos: [0, 0], size: [0, 0], el: img_main, desc: p.select('#main').html()};
 				img_sizeScale_obj  = {
@@ -515,12 +515,12 @@ export class TechnicalComponent implements OnInit {
 			}
 
 			p.preload = () => {
-				img_main       = p.loadImage('../../assets/images/technical/main_ny.png');
-				img_sizeSacle  = p.loadImage('../../assets/images/technical/size_scale.png');
-				img_colorScale = p.loadImage('../../assets/images/technical/color_scale.jpg');
-				img_floor      = p.loadImage('../../assets/images/technical/tapis.png');
-				img_sat        = p.loadImage('../../assets/images/technical/sat.jpg');
-				img_light      = p.loadImage('../../assets/images/technical/nycity.png');
+				img_main       = p.loadImage('assets/images/technical/main_ny.png');
+				img_sizeSacle  = p.loadImage('assets/images/technical/size_scale.png');
+				img_colorScale = p.loadImage('assets/images/technical/color_scale.jpg');
+				img_floor      = p.loadImage('assets/images/technical/tapis.png');
+				img_sat        = p.loadImage('assets/images/technical/sat.jpg');
+				img_light      = p.loadImage('assets/images/technical/nycity.png');
 
 				img_main_obj       = {pos: [0, 0], size: [0, 0], el: img_main, desc: p.select('#main').html()};
 				img_sizeScale_obj  = {
