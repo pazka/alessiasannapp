@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit(): void {
 		$('video').each((i) => {
-							console.log($('video')[i]);
 							(<HTMLVideoElement> $('video')[i]).muted = true;
 							(<HTMLVideoElement> $('video')[i]).play();
 						}
